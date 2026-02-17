@@ -124,7 +124,7 @@ export default async function ListingPage({
         </div>
       </div>
 
-      <ContactForm />
+      <ContactForm listingName={localized.name} />
     </>
   );
 }

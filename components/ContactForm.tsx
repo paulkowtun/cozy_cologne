@@ -3,28 +3,48 @@
 import { useState, FormEvent } from 'react';
 import { useTranslations } from 'next-intl';
 
-export default function ContactForm() {
+interface ContactFormProps {
+  listingName?: string;
+}
+
+export default function ContactForm({ listingName }: ContactFormProps) {
   const t = useTranslations('contact');
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSending(true);
+    setError(false);
+
     const formData = new FormData(e.currentTarget);
     const data = {
       name: formData.get('name'),
       email: formData.get('email'),
       phone: formData.get('phone'),
       message: formData.get('message'),
+      ...(listingName && { listing: listingName }),
     };
 
-    // TODO: Integrate with email service (e.g. Resend, SendGrid).
-    // Replace console.log with API call:
-    // await fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) });
-    console.log('Contact form submission:', data);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
 
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
-    e.currentTarget.reset();
+      if (!res.ok) throw new Error('Failed');
+
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 5000);
+      e.currentTarget.reset();
+    } catch {
+      setError(true);
+      setTimeout(() => setError(false), 5000);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -37,6 +57,22 @@ export default function ContactForm() {
           <div className="w-16 h-1 bg-brand-warm-dark rounded-full mx-auto mb-12" />
 
           <form onSubmit={handleSubmit} className="space-y-6">
+            {listingName && (
+              <div>
+                <label htmlFor="listing" className="block text-sm font-heading font-semibold text-page-black mb-1.5">
+                  {t('listing')}
+                </label>
+                <input
+                  id="listing"
+                  name="listing"
+                  type="text"
+                  readOnly
+                  value={listingName}
+                  className="w-full px-4 py-3 rounded-brand border border-neutral-light bg-neutral-50 text-page-black cursor-not-allowed"
+                />
+              </div>
+            )}
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-heading font-semibold text-page-black mb-1.5">
@@ -96,17 +132,22 @@ export default function ContactForm() {
             <div className="text-center">
               <button
                 type="submit"
-                className="inline-block rounded-brand bg-brand-warm-dark px-10 py-3.5 font-heading font-semibold text-white hover:bg-brand-warm-dark/90 hover:shadow-lg transition-all duration-300"
+                disabled={sending}
+                className="inline-block rounded-brand bg-brand-warm-dark px-10 py-3.5 font-heading font-semibold text-white hover:bg-brand-warm-dark/90 hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {t('submit')}
+                {sending ? t('sending') : t('submit')}
               </button>
             </div>
           </form>
 
-          {/* Success toast */}
           {submitted && (
-            <div className="mt-6 p-4 rounded-brand bg-green-50 border border-green-200 text-green-800 text-center font-heading text-sm animate-pulse">
+            <div className="mt-6 p-4 rounded-brand bg-green-50 border border-green-200 text-green-800 text-center font-heading text-sm">
               {t('success')}
+            </div>
+          )}
+          {error && (
+            <div className="mt-6 p-4 rounded-brand bg-red-50 border border-red-200 text-red-800 text-center font-heading text-sm">
+              {t('error')}
             </div>
           )}
         </div>
