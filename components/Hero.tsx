@@ -6,11 +6,11 @@ export default function Hero() {
   const t = useTranslations('hero');
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      {/* Gradient background */}
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Gradient background — top to bottom for text contrast */}
       <div
         className="absolute inset-0 z-0"
-        style={{ background: 'linear-gradient(135deg, #9D8D76 0%, #EDE6CF 60%, #FAFAF8 100%)' }}
+        style={{ background: 'linear-gradient(to bottom, #7A6E5A 0%, #9D8D76 40%, #C4B89E 75%, #FAFAF8 100%)' }}
       />
 
       {/* Decorative circles */}

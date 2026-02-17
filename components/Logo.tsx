@@ -9,7 +9,7 @@ export default function Logo({ className = '' }: { className?: string }) {
         <span className="relative inline-block">
           cozy!
           <span
-            className="absolute bottom-0 left-0 w-full h-[3px] bg-brand-warm-dark rounded-full"
+            className="absolute bottom-0 left-0 w-full h-[3px] bg-[#E8C50B] rounded-full"
             aria-hidden="true"
           />
         </span>{' '}

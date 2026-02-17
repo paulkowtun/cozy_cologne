@@ -16,7 +16,7 @@ export default function Footer() {
             <span className="font-heading text-2xl font-bold tracking-tight text-white">
               <span className="relative inline-block">
                 cozy!
-                <span className="absolute bottom-0 left-0 w-full h-[3px] bg-brand-warm-dark rounded-full" />
+                <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#E8C50B] rounded-full" />
               </span>{' '}
               <span className="text-brand-warm-dark">cologne</span>
             </span>
