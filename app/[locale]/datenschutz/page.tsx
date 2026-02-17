@@ -21,14 +21,26 @@ export default async function DatenschutzPage({
         <h1 className="font-heading text-3xl sm:text-4xl font-bold text-page-black mb-8">
           {t('title')}
         </h1>
-        <div className="prose prose-neutral max-w-none">
+        <div className="max-w-none space-y-1">
           {t('content')
             .split('\n')
-            .map((line, i) => (
-              <p key={i} className="text-neutral-dark leading-relaxed mb-2">
-                {line}
-              </p>
-            ))}
+            .map((line, i) => {
+              if (!line.trim()) return <div key={i} className="h-4" />;
+              const isHeading = line.endsWith(':') || /^\d+\./.test(line);
+              return isHeading ? (
+                <h2 key={i} className="font-heading font-bold text-page-black text-lg mt-6 mb-1">
+                  {line}
+                </h2>
+              ) : line.startsWith('- ') ? (
+                <p key={i} className="text-neutral-dark leading-relaxed pl-4">
+                  {line}
+                </p>
+              ) : (
+                <p key={i} className="text-neutral-dark leading-relaxed">
+                  {line}
+                </p>
+              );
+            })}
         </div>
       </div>
     </div>
