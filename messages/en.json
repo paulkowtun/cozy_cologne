@@ -1,0 +1,99 @@
+{
+  "nav": {
+    "apartments": "Apartments",
+    "about": "About",
+    "contact": "Contact",
+    "impressum": "Legal Notice",
+    "datenschutz": "Privacy Policy"
+  },
+  "hero": {
+    "headline": "Fully furnished. Fully renovated. Fully Cologne.",
+    "subheadline": "Premium furnished apartments and flat-share concepts in Cologne's best neighborhoods — move-in ready and designed with love.",
+    "cta": "Explore Apartments"
+  },
+  "about": {
+    "title": "About Us",
+    "text": "At cozy! cologne, we rent out fully furnished, completely renovated apartments and flat-share concepts in Cologne's most popular neighborhoods. Every apartment is furnished with the highest quality and attention to detail — so you feel at home from day one.",
+    "point1": "Fully furnished & move-in ready",
+    "point2": "Superior quality",
+    "point3": "Completely renovated",
+    "point4": "Apartments & flat-share concepts"
+  },
+  "apartments": {
+    "title": "Our Apartments",
+    "rooms": "Rooms",
+    "sqm": "Square Meters",
+    "sqmShort": "sqm",
+    "type": "Type",
+    "apartment": "Apartment",
+    "flatShare": "Flat Share",
+    "terrace": "Terrace",
+    "elevator": "Elevator",
+    "parking": "Parking",
+    "cityPart": "Neighborhood",
+    "allCityParts": "All Neighborhoods",
+    "features": "Features",
+    "resetFilters": "Reset Filters",
+    "sortBy": "Sort by",
+    "sortRentAsc": "Rent (low to high)",
+    "sortRentDesc": "Rent (high to low)",
+    "sortSqmAsc": "Size (small to large)",
+    "sortSqmDesc": "Size (large to small)",
+    "warmRent": "Warm Rent",
+    "noResults": "No apartments found. Please adjust your filters.",
+    "from": "from",
+    "perMonth": "/ month",
+    "allTypes": "All",
+    "roomsAll": "All",
+    "min": "Min",
+    "max": "Max"
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone (optional)",
+    "message": "Message",
+    "submit": "Send Message",
+    "success": "Thank you! Your message has been sent.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "phonePlaceholder": "+49 ...",
+    "messagePlaceholder": "How can we help you?"
+  },
+  "footer": {
+    "madeWith": "Made with ❤️ in Cologne",
+    "copyright": "© 2025 cozy! cologne"
+  },
+  "listing": {
+    "backToOverview": "Back to Overview",
+    "rooms": "Rooms",
+    "sqm": "Square Meters",
+    "floor": "Floor",
+    "warmRent": "Warm Rent",
+    "coldRent": "Cold Rent",
+    "utilities": "Utilities",
+    "availableFrom": "Available From",
+    "minRental": "Min. Rental Period",
+    "features": "Features",
+    "highlights": "Highlights",
+    "description": "Description",
+    "contactCta": "Inquire Now",
+    "address": "Address",
+    "type": "Type",
+    "apartment": "Apartment",
+    "flatShare": "Flat Share"
+  },
+  "impressum": {
+    "title": "Legal Notice",
+    "content": "Information according to § 5 TMG\n\ncozy! cologne\nMusterstraße 1\n50667 Cologne\n\nContact:\nPhone: +49 (0) 221 12345678\nEmail: info@cozy-cologne.de\n\nResponsible for content according to § 55 Abs. 2 RStV:\nMax Mustermann\nMusterstraße 1\n50667 Cologne\n\nDisclaimer:\nThe contents of these pages were created with great care. However, we cannot guarantee the accuracy, completeness, and timeliness of the content."
+  },
+  "datenschutz": {
+    "title": "Privacy Policy",
+    "content": "Privacy Policy\n\n1. Privacy at a Glance\n\nGeneral Information\nThe following notes provide a simple overview of what happens to your personal data when you visit this website.\n\n2. General Information and Mandatory Information\n\nData Protection\nThe operators of these pages take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this privacy policy.\n\n3. Data Collection on This Website\n\nWho is responsible for data collection on this website?\nData processing on this website is carried out by the website operator. Their contact details can be found in the legal notice of this website.\n\nPlaceholder — please replace with a complete privacy policy."
+  },
+  "metadata": {
+    "title": "cozy! cologne — Furnished Apartments in Cologne",
+    "description": "Premium furnished apartments and flat-share concepts in Cologne. Fully renovated, fully furnished, move-in ready."
+  }
+}

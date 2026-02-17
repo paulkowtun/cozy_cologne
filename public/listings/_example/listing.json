@@ -1,0 +1,49 @@
+{
+  "name": "Gemütliche 2-Zimmer-Wohnung in Ehrenfeld",
+  "nameEN": "Cozy 2-Room Apartment in Ehrenfeld",
+  "adresse": "Venloer Straße 42, 50823 Köln",
+  "stadtteil": "Ehrenfeld",
+  "typ": "wohnung",
+  "zimmer": 2,
+  "quadratmeter": 55,
+  "etage": 2,
+  "warmmiete": 1200,
+  "kaltmiete": 950,
+  "nebenkosten": 250,
+  "verfuegbarAb": "2025-04-01",
+  "mindestmietdauer": "12 Monate",
+  "mindestmietdauerEN": "12 months",
+  "terrasse": false,
+  "aufzug": true,
+  "parkplatz": false,
+  "ausstattung": [
+    "Voll möbliert",
+    "Einbauküche",
+    "Waschmaschine",
+    "WLAN",
+    "Aufzug",
+    "Fußbodenheizung",
+    "Balkon"
+  ],
+  "ausstattungEN": [
+    "Fully furnished",
+    "Fitted kitchen",
+    "Washing machine",
+    "WiFi",
+    "Elevator",
+    "Underfloor heating",
+    "Balcony"
+  ],
+  "highlights": [
+    "Frisch renoviert im modernen Stil",
+    "Ruhige Lage trotz zentraler Lage",
+    "5 Minuten zur U-Bahn Ehrenfeld"
+  ],
+  "highlightsEN": [
+    "Freshly renovated in modern style",
+    "Quiet location despite central position",
+    "5 minutes to Ehrenfeld subway station"
+  ],
+  "beschreibung": "Diese wunderschöne 2-Zimmer-Wohnung liegt im Herzen von Ehrenfeld, einem der beliebtesten Viertel Kölns. Die Wohnung wurde komplett renoviert und hochwertig möbliert. Sie verfügt über ein geräumiges Wohnzimmer mit Zugang zum Balkon, ein gemütliches Schlafzimmer, eine voll ausgestattete Küche und ein modernes Badezimmer. Die Venloer Straße bietet zahlreiche Restaurants, Cafés und Einkaufsmöglichkeiten direkt vor der Tür.",
+  "beschreibungEN": "This beautiful 2-room apartment is located in the heart of Ehrenfeld, one of Cologne's most popular neighborhoods. The apartment has been completely renovated and furnished to a high standard. It features a spacious living room with balcony access, a cozy bedroom, a fully equipped kitchen, and a modern bathroom. Venloer Straße offers numerous restaurants, cafés, and shopping options right at your doorstep."
+}

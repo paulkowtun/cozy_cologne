@@ -1,0 +1,99 @@
+{
+  "nav": {
+    "apartments": "Wohnungen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz"
+  },
+  "hero": {
+    "headline": "Voll möbliert. Voll renoviert. Voll Köln.",
+    "subheadline": "Hochwertig möblierte Apartments und WG-Konzepte in den besten Vierteln Kölns — bezugsfertig und mit Liebe eingerichtet.",
+    "cta": "Wohnungen entdecken"
+  },
+  "about": {
+    "title": "Über uns",
+    "text": "Bei cozy! cologne vermieten wir voll möblierte, komplett renovierte Apartments und WG-Konzepte in den beliebtesten Vierteln Kölns. Jede Wohnung wird mit höchster Qualität und Liebe zum Detail eingerichtet — damit Sie sich vom ersten Tag an zuhause fühlen.",
+    "point1": "Voll möbliert & bezugsfertig",
+    "point2": "Hochwertige Ausstattung",
+    "point3": "Komplett renoviert",
+    "point4": "Apartments & WG-Konzepte"
+  },
+  "apartments": {
+    "title": "Unsere Wohnungen",
+    "rooms": "Zimmer",
+    "sqm": "Quadratmeter",
+    "sqmShort": "m²",
+    "type": "Typ",
+    "apartment": "Wohnung",
+    "flatShare": "WG",
+    "terrace": "Terrasse",
+    "elevator": "Aufzug",
+    "parking": "Parkplatz",
+    "cityPart": "Stadtteil",
+    "allCityParts": "Alle Stadtteile",
+    "features": "Ausstattung",
+    "resetFilters": "Filter zurücksetzen",
+    "sortBy": "Sortieren",
+    "sortRentAsc": "Miete aufsteigend",
+    "sortRentDesc": "Miete absteigend",
+    "sortSqmAsc": "m² aufsteigend",
+    "sortSqmDesc": "m² absteigend",
+    "warmRent": "Warmmiete",
+    "noResults": "Keine Wohnungen gefunden. Bitte passen Sie Ihre Filter an.",
+    "from": "ab",
+    "perMonth": "/ Monat",
+    "allTypes": "Alle",
+    "roomsAll": "Alle",
+    "min": "Min",
+    "max": "Max"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefon (optional)",
+    "message": "Nachricht",
+    "submit": "Nachricht senden",
+    "success": "Vielen Dank! Ihre Nachricht wurde gesendet.",
+    "namePlaceholder": "Ihr Name",
+    "emailPlaceholder": "ihre@email.de",
+    "phonePlaceholder": "+49 ...",
+    "messagePlaceholder": "Wie können wir Ihnen helfen?"
+  },
+  "footer": {
+    "madeWith": "Made with ❤️ in Köln",
+    "copyright": "© 2025 cozy! cologne"
+  },
+  "listing": {
+    "backToOverview": "Zurück zur Übersicht",
+    "rooms": "Zimmer",
+    "sqm": "Quadratmeter",
+    "floor": "Etage",
+    "warmRent": "Warmmiete",
+    "coldRent": "Kaltmiete",
+    "utilities": "Nebenkosten",
+    "availableFrom": "Verfügbar ab",
+    "minRental": "Mindestmietdauer",
+    "features": "Ausstattung",
+    "highlights": "Highlights",
+    "description": "Beschreibung",
+    "contactCta": "Jetzt anfragen",
+    "address": "Adresse",
+    "type": "Typ",
+    "apartment": "Wohnung",
+    "flatShare": "WG"
+  },
+  "impressum": {
+    "title": "Impressum",
+    "content": "Angaben gemäß § 5 TMG\n\ncozy! cologne\nMusterstraße 1\n50667 Köln\n\nKontakt:\nTelefon: +49 (0) 221 12345678\nE-Mail: info@cozy-cologne.de\n\nVerantwortlich für den Inhalt nach § 55 Abs. 2 RStV:\nMax Mustermann\nMusterstraße 1\n50667 Köln\n\nHaftungsausschluss:\nDie Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen."
+  },
+  "datenschutz": {
+    "title": "Datenschutzerklärung",
+    "content": "Datenschutzerklärung\n\n1. Datenschutz auf einen Blick\n\nAllgemeine Hinweise\nDie folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.\n\n2. Allgemeine Hinweise und Pflichtinformationen\n\nDatenschutz\nDie Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.\n\n3. Datenerfassung auf dieser Website\n\nWer ist verantwortlich für die Datenerfassung auf dieser Website?\nDie Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.\n\nPlatzhalter — bitte durch vollständige Datenschutzerklärung ersetzen."
+  },
+  "metadata": {
+    "title": "cozy! cologne — Möblierte Apartments in Köln",
+    "description": "Hochwertig möblierte Apartments und WG-Konzepte in Köln. Voll renoviert, voll möbliert, sofort bezugsfertig."
+  }
+}
