@@ -8,6 +8,8 @@ import ListingDetails from '@/components/ListingDetails';
 import ContactForm from '@/components/ContactForm';
 import { Link } from '@/i18n/navigation';
 
+export const dynamicParams = true;
+
 export function generateStaticParams() {
   const slugs = getAllSlugs();
   const params: { locale: string; slug: string }[] = [];

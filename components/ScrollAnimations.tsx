@@ -15,10 +15,21 @@ export default function ScrollAnimations() {
       { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
     );
 
-    const elements = document.querySelectorAll('.fade-in');
-    elements.forEach((el) => observer.observe(el));
+    const observeAll = () => {
+      document.querySelectorAll('.fade-in:not(.visible)').forEach((el) => {
+        observer.observe(el);
+      });
+    };
 
-    return () => observer.disconnect();
+    observeAll();
+
+    const mutation = new MutationObserver(observeAll);
+    mutation.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      observer.disconnect();
+      mutation.disconnect();
+    };
   }, []);
 
   return null;

@@ -25,8 +25,8 @@ export default function ApartmentSearch({ listings }: ApartmentSearchProps) {
   const filtered = useMemo(() => {
     let result = listings.filter((l) => {
       if (filters.rooms !== null) {
-        if (filters.rooms === 4) {
-          if (l.zimmer < 4) return false;
+        if (filters.rooms === 5) {
+          if (l.zimmer < 5) return false;
         } else {
           if (l.zimmer !== filters.rooms) return false;
         }

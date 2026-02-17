@@ -39,35 +39,30 @@ export default function FilterBar({ filters, onFilterChange, cityParts }: Filter
     onFilterChange({ ...filters, ...partial });
   };
 
-  const roomOptions = [null, 1, 2, 3, 4];
-
   return (
     <div className="bg-white rounded-2xl shadow-md p-6 mb-8">
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+      <div className="flex flex-wrap gap-4 w-full">
         {/* Rooms */}
-        <div>
+        <div className="flex-[0.5] min-w-[4rem]">
           <label className="block text-xs font-heading font-semibold text-neutral-dark mb-1.5">
             {t('rooms')}
           </label>
-          <div className="flex gap-1">
-            {roomOptions.map((r) => (
-              <button
-                key={r ?? 'all'}
-                onClick={() => update({ rooms: r })}
-                className={`flex-1 py-1.5 text-xs font-heading font-medium rounded-lg transition-colors ${
-                  filters.rooms === r
-                    ? 'bg-brand-warm-dark text-white'
-                    : 'bg-brand-warm-light/50 text-neutral-dark hover:bg-brand-warm-light'
-                }`}
-              >
-                {r === null ? t('roomsAll') : r === 4 ? '4+' : r}
-              </button>
-            ))}
-          </div>
+          <select
+            value={filters.rooms ?? ''}
+            onChange={(e) => update({ rooms: e.target.value === '' ? null : Number(e.target.value) })}
+            className="w-full px-2 py-1.5 text-xs border border-neutral-light rounded-lg focus:outline-none focus:ring-1 focus:ring-brand-warm-dark bg-white"
+          >
+            <option value="">{t('roomsAll')}</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5+</option>
+          </select>
         </div>
 
         {/* Square meters */}
-        <div>
+        <div className="flex-[2] min-w-[10rem]">
           <label className="block text-xs font-heading font-semibold text-neutral-dark mb-1.5">
             {t('sqm')}
           </label>
@@ -90,7 +85,7 @@ export default function FilterBar({ filters, onFilterChange, cityParts }: Filter
         </div>
 
         {/* Type */}
-        <div>
+        <div className="flex-[2] min-w-[10rem]">
           <label className="block text-xs font-heading font-semibold text-neutral-dark mb-1.5">
             {t('type')}
           </label>
@@ -112,7 +107,7 @@ export default function FilterBar({ filters, onFilterChange, cityParts }: Filter
         </div>
 
         {/* Boolean toggles */}
-        <div>
+        <div className="flex-[2] min-w-[12rem]">
           <label className="block text-xs font-heading font-semibold text-neutral-dark mb-1.5">
             {t('features')}
           </label>
@@ -134,14 +129,14 @@ export default function FilterBar({ filters, onFilterChange, cityParts }: Filter
                 }`}
                 title={label}
               >
-                {label.substring(0, 3)}
+                {label}
               </button>
             ))}
           </div>
         </div>
 
         {/* City part */}
-        <div>
+        <div className="flex-1 min-w-[7rem]">
           <label className="block text-xs font-heading font-semibold text-neutral-dark mb-1.5">
             {t('cityPart')}
           </label>
@@ -150,17 +145,18 @@ export default function FilterBar({ filters, onFilterChange, cityParts }: Filter
             onChange={(e) => update({ cityPart: e.target.value })}
             className="w-full px-2 py-1.5 text-xs border border-neutral-light rounded-lg focus:outline-none focus:ring-1 focus:ring-brand-warm-dark bg-white"
           >
-            <option value="">{t('allCityParts')}</option>
-            {cityParts.map((cp) => (
-              <option key={cp} value={cp}>
-                {cp}
-              </option>
-            ))}
+            {[{ key: '__all__', value: '', label: t('allCityParts') }, ...cityParts.map((cp) => ({ key: cp, value: cp, label: cp }))].map(
+              (opt) => (
+                <option key={opt.key} value={opt.value}>
+                  {opt.label}
+                </option>
+              )
+            )}
           </select>
         </div>
 
         {/* Sort */}
-        <div>
+        <div className="flex-1 min-w-[7rem]">
           <label className="block text-xs font-heading font-semibold text-neutral-dark mb-1.5">
             {t('sortBy')}
           </label>
@@ -169,16 +165,17 @@ export default function FilterBar({ filters, onFilterChange, cityParts }: Filter
             onChange={(e) => update({ sort: e.target.value as Filters['sort'] })}
             className="w-full px-2 py-1.5 text-xs border border-neutral-light rounded-lg focus:outline-none focus:ring-1 focus:ring-brand-warm-dark bg-white"
           >
-            <option value="rentAsc">{t('sortRentAsc')}</option>
-            <option value="rentDesc">{t('sortRentDesc')}</option>
-            <option value="sqmAsc">{t('sortSqmAsc')}</option>
-            <option value="sqmDesc">{t('sortSqmDesc')}</option>
+            <option key="rentAsc" value="rentAsc">{t('sortRentAsc')}</option>
+            <option key="rentDesc" value="rentDesc">{t('sortRentDesc')}</option>
+            <option key="sqmAsc" value="sqmAsc">{t('sortSqmAsc')}</option>
+            <option key="sqmDesc" value="sqmDesc">{t('sortSqmDesc')}</option>
           </select>
         </div>
+
       </div>
 
       {/* Reset */}
-      <div className="mt-4 flex justify-end">
+      <div className="mt-3 flex justify-end">
         <button
           onClick={() => onFilterChange(defaultFilters)}
           className="text-xs font-heading font-medium text-brand-warm-dark hover:underline"

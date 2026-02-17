@@ -1,25 +1,32 @@
 {
   "name": "",
   "nameEN": "",
-  "adresse": "",
-  "stadtteil": "",
+  "beschreibung": "",
+  "beschreibungEN": "",
+  "adresse": {
+    "strasse": "",
+    "plz": "",
+    "stadt": "Köln",
+    "stadtteil": ""
+  },
   "typ": "wohnung",
   "zimmer": 0,
   "quadratmeter": 0,
   "etage": 0,
-  "warmmiete": 0,
-  "kaltmiete": 0,
-  "nebenkosten": 0,
+  "ausstattung": {
+    "terrasse": false,
+    "aufzug": false,
+    "parkplatz": false
+  },
+  "miete": {
+    "warmmiete": 0,
+    "kaltmiete": 0,
+    "nebenkosten": 0,
+    "waehrung": "EUR"
+  },
   "verfuegbarAb": "YYYY-MM-DD",
   "mindestmietdauer": "",
   "mindestmietdauerEN": "",
-  "terrasse": false,
-  "aufzug": false,
-  "parkplatz": false,
-  "ausstattung": [],
-  "ausstattungEN": [],
   "highlights": [],
-  "highlightsEN": [],
-  "beschreibung": "",
-  "beschreibungEN": ""
+  "highlightsEN": []
 }

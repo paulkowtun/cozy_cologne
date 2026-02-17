@@ -30,7 +30,6 @@ export default function Header() {
     { href: '/#apartments', label: t('apartments') },
     { href: '/#about', label: t('about') },
     { href: '/#contact', label: t('contact') },
-    { href: '/impressum', label: t('impressum') },
   ];
 
   return (

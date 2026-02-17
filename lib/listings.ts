@@ -1,7 +1,7 @@
 // To add a new listing:
 // 1. Create a folder in /public/listings/ (folder name becomes the URL slug)
 // 2. Add a listing.json following the template (see listing-template.json)
-// 3. Add an images/ subfolder with photos (named 01-xxx.jpg, 02-xxx.jpg, etc.)
+// 3. Add a bilder/ subfolder with photos (named 01-xxx.jpg, 02-xxx.jpg, etc.)
 // 4. Run `npm run build` or push to Vercel to deploy
 //
 // If listing count grows past ~500, consider migrating to a headless CMS
@@ -37,17 +37,48 @@ export function getListingBySlug(slug: string): Listing | null {
   if (!fs.existsSync(jsonPath)) return null;
 
   const raw: ListingRaw = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
-  const imagesDir = path.join(listingDir, 'images');
+  const bilderDir = path.join(listingDir, 'bilder');
 
   let images: string[] = [];
-  if (fs.existsSync(imagesDir)) {
-    images = fs.readdirSync(imagesDir)
+  if (fs.existsSync(bilderDir)) {
+    images = fs.readdirSync(bilderDir)
       .filter((f) => /\.(jpg|jpeg|png|webp|svg)$/i.test(f))
       .sort()
-      .map((f) => `/listings/${slug}/images/${f}`);
+      .map((f) => `/listings/${slug}/bilder/${f}`);
   }
 
-  return { ...raw, slug, images };
+  // Flatten nested JSON into flat Listing
+  const ausstattungKeys = Object.entries(raw.ausstattung)
+    .filter(([, v]) => v === true)
+    .map(([k]) => k);
+
+  return {
+    slug,
+    name: raw.name,
+    nameEN: raw.nameEN,
+    adresse: `${raw.adresse.strasse}, ${raw.adresse.plz} ${raw.adresse.stadt}`,
+    stadtteil: raw.adresse.stadtteil,
+    typ: raw.typ,
+    zimmer: raw.zimmer,
+    quadratmeter: raw.quadratmeter,
+    etage: raw.etage,
+    warmmiete: raw.miete.warmmiete,
+    kaltmiete: raw.miete.kaltmiete,
+    nebenkosten: raw.miete.nebenkosten,
+    verfuegbarAb: raw.verfuegbarAb,
+    mindestmietdauer: raw.mindestmietdauer,
+    mindestmietdauerEN: raw.mindestmietdauerEN,
+    terrasse: raw.ausstattung.terrasse ?? false,
+    aufzug: raw.ausstattung.aufzug ?? false,
+    parkplatz: raw.ausstattung.parkplatz ?? false,
+    ausstattung: ausstattungKeys,
+    ausstattungEN: ausstattungKeys,
+    highlights: raw.highlights,
+    highlightsEN: raw.highlightsEN,
+    beschreibung: raw.beschreibung,
+    beschreibungEN: raw.beschreibungEN,
+    images,
+  };
 }
 
 export function getLocalizedListing(
