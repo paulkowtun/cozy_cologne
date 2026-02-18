@@ -9,9 +9,10 @@
     "stadt": "Köln",
     "stadtteil": "Köln-Mühlheim"
   },
-  "typ": "wg",
+  "typ": "wohnung",
   "zimmer": 3,
-  "quadratmeter": 55,
+  "quadratmeter": 10,
+  "gemeinschaftsflaeche": 15,
   "etage": 2,
   "ausstattung": {
     "terrasse": true,
@@ -19,6 +20,14 @@
     "parkplatz": false,
     "balkon": false,
     "keller": true
+  },
+  "energieausweis": {
+    "art": "bedarfsausweis",
+    "endenergie": 120,
+    "energietraeger": "Gas",
+    "energietraegerEN": "Gas",
+    "baujahr": 1965,
+    "effizienzklasse": "D"
   },
   "miete": {
     "warmmiete": 1450,

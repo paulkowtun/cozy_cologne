@@ -19,6 +19,15 @@ export interface ListingJsonMiete {
   waehrung: string;
 }
 
+export interface ListingJsonEnergieausweis {
+  art: 'bedarfsausweis' | 'verbrauchsausweis' | 'denkmal';
+  endenergie: number;
+  energietraeger: string;
+  energietraegerEN: string;
+  baujahr: number;
+  effizienzklasse: string;
+}
+
 export interface ListingRaw {
   name: string;
   nameEN: string;
@@ -26,9 +35,11 @@ export interface ListingRaw {
   typ: 'wohnung' | 'wg';
   zimmer: number;
   quadratmeter: number;
+  gemeinschaftsflaeche?: number;
   etage: number;
   miete: ListingJsonMiete;
   ausstattung: ListingJsonAusstattung;
+  energieausweis: ListingJsonEnergieausweis;
   verfuegbarAb: string;
   mindestmietdauer: string;
   mindestmietdauerEN: string;
@@ -47,6 +58,7 @@ export interface Listing {
   typ: 'wohnung' | 'wg';
   zimmer: number;
   quadratmeter: number;
+  gemeinschaftsflaeche: number;
   etage: number;
   warmmiete: number;
   kaltmiete: number;
@@ -61,6 +73,12 @@ export interface Listing {
   ausstattungEN: string[];
   highlights: string[];
   highlightsEN: string[];
+  energieausweisArt: 'bedarfsausweis' | 'verbrauchsausweis' | 'denkmal';
+  endenergie: number;
+  energietraeger: string;
+  energietraegerEN: string;
+  baujahr: number;
+  effizienzklasse: string;
   beschreibung: string;
   beschreibungEN: string;
   images: string[];
@@ -74,6 +92,7 @@ export interface LocalizedListing {
   typ: 'wohnung' | 'wg';
   zimmer: number;
   quadratmeter: number;
+  gemeinschaftsflaeche: number;
   etage: number;
   warmmiete: number;
   kaltmiete: number;
@@ -85,6 +104,11 @@ export interface LocalizedListing {
   parkplatz: boolean;
   ausstattung: string[];
   highlights: string[];
+  energieausweisArt: 'bedarfsausweis' | 'verbrauchsausweis' | 'denkmal';
+  endenergie: number;
+  energietraeger: string;
+  baujahr: number;
+  effizienzklasse: string;
   beschreibung: string;
   images: string[];
 }

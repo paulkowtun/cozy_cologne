@@ -24,20 +24,35 @@ export default function ListingDetails({ listing }: ListingDetailsProps) {
       </div>
 
       {/* Key stats */}
-      <div className="grid grid-cols-3 gap-4 mb-8">
-        <div className="bg-brand-warm-light/50 rounded-brand p-4 text-center">
-          <p className="text-2xl font-heading font-bold text-page-black">{listing.zimmer}</p>
-          <p className="text-xs text-neutral-dark font-heading">{t('rooms')}</p>
+      {listing.typ === 'wg' ? (
+        <div className="grid grid-cols-3 gap-4 mb-8">
+          <div className="bg-brand-warm-light/50 rounded-brand p-4 text-center">
+            <p className="text-2xl font-heading font-bold text-page-black">{listing.zimmer}</p>
+            <p className="text-xs text-neutral-dark font-heading">{t('roomsWithKitchenBath')}</p>
+          </div>
+          <div className="bg-brand-warm-light/50 rounded-brand p-4 text-center">
+            <p className="text-2xl font-heading font-bold text-page-black">{listing.quadratmeter}</p>
+            <p className="text-xs text-neutral-dark font-heading">m² {t('perRoom')}</p>
+          </div>
+          {listing.gemeinschaftsflaeche > 0 && (
+            <div className="bg-brand-warm-light/50 rounded-brand p-4 flex flex-col items-center justify-center text-center">
+              <p className="text-2xl font-heading font-bold text-page-black">{listing.gemeinschaftsflaeche}</p>
+              <p className="text-xs text-neutral-dark font-heading">m² {t('sharedArea')}</p>
+            </div>
+          )}
         </div>
-        <div className="bg-brand-warm-light/50 rounded-brand p-4 text-center">
-          <p className="text-2xl font-heading font-bold text-page-black">{listing.quadratmeter}</p>
-          <p className="text-xs text-neutral-dark font-heading">m&sup2;</p>
+      ) : (
+        <div className="grid grid-cols-2 gap-4 mb-8">
+          <div className="bg-brand-warm-light/50 rounded-brand p-5 text-center">
+            <p className="text-3xl font-heading font-bold text-page-black">{listing.zimmer}</p>
+            <p className="text-sm text-neutral-dark font-heading">{t('rooms')}</p>
+          </div>
+          <div className="bg-brand-warm-light/50 rounded-brand p-5 text-center">
+            <p className="text-3xl font-heading font-bold text-page-black">{listing.quadratmeter}</p>
+            <p className="text-sm text-neutral-dark font-heading">m²</p>
+          </div>
         </div>
-        <div className="bg-brand-warm-light/50 rounded-brand p-4 text-center">
-          <p className="text-2xl font-heading font-bold text-page-black">{listing.etage}.</p>
-          <p className="text-xs text-neutral-dark font-heading">{t('floor')}</p>
-        </div>
-      </div>
+      )}
 
       {/* Rent breakdown */}
       <div className="bg-white rounded-2xl border border-neutral-light/30 p-6 mb-8">
@@ -62,8 +77,8 @@ export default function ListingDetails({ listing }: ListingDetailsProps) {
       {/* Details */}
       <div className="space-y-4 mb-8">
         <div className="flex justify-between py-3 border-b border-neutral-light/30">
-          <span className="text-neutral-dark">{t('availableFrom')}</span>
-          <span className="font-medium text-page-black">
+          <span className="font-heading font-bold text-page-black">{t('availableFrom')}</span>
+          <span className="font-heading font-bold text-page-black">
             {new Date(listing.verfuegbarAb).toLocaleDateString('de-DE', {
               day: '2-digit',
               month: '2-digit',
@@ -71,10 +86,77 @@ export default function ListingDetails({ listing }: ListingDetailsProps) {
             })}
           </span>
         </div>
+        {listing.typ === 'wg' && listing.gemeinschaftsflaeche > 0 && (
+          <>
+            <div className="flex justify-between py-3 border-b border-neutral-light/30">
+              <span className="text-neutral-dark">{t('areaPerRoom')}</span>
+              <span className="font-medium text-page-black">{listing.quadratmeter} m&sup2;</span>
+            </div>
+            <div className="flex justify-between py-3 border-b border-neutral-light/30">
+              <span className="text-neutral-dark">{t('sharedArea')}</span>
+              <span className="font-medium text-page-black">{listing.gemeinschaftsflaeche} m&sup2;</span>
+            </div>
+            <div className="flex justify-between py-3 border-b border-neutral-light/30">
+              <span className="text-neutral-dark">{t('totalAreaWg')}</span>
+              <span className="font-medium text-page-black">{listing.quadratmeter * listing.zimmer + listing.gemeinschaftsflaeche} m&sup2;</span>
+            </div>
+          </>
+        )}
+        {listing.typ === 'wohnung' && (
+          <div className="flex justify-between py-3 border-b border-neutral-light/30">
+            <span className="text-neutral-dark">{t('sqm')}</span>
+            <span className="font-medium text-page-black">{listing.quadratmeter} m&sup2;</span>
+          </div>
+        )}
+        <div className="flex justify-between py-3 border-b border-neutral-light/30">
+          <span className="text-neutral-dark">{t('floor')}</span>
+          <span className="font-medium text-page-black">{listing.etage}.</span>
+        </div>
         <div className="flex justify-between py-3 border-b border-neutral-light/30">
           <span className="text-neutral-dark">{t('minRental')}</span>
           <span className="font-medium text-page-black">{listing.mindestmietdauer}</span>
         </div>
+        <div className="flex justify-between py-3 border-b border-neutral-light/30">
+          <span className="text-neutral-dark">{t('deposit')}</span>
+          <span className="font-medium text-page-black">{(listing.kaltmiete * 3).toLocaleString('de-DE')} &euro;</span>
+        </div>
+      </div>
+
+      {/* Energieausweis */}
+      <div className="mb-8">
+        <h2 className="font-heading font-bold text-lg text-page-black mb-4">{t('energyCertificate')}</h2>
+        {listing.energieausweisArt === 'denkmal' ? (
+          <p className="text-neutral-dark py-3">{t('monumentProtection')}</p>
+        ) : (
+          <div className="space-y-4">
+            <div className="flex justify-between py-3 border-b border-neutral-light/30">
+              <span className="text-neutral-dark">{t('energyCertificateType')}</span>
+              <span className="font-medium text-page-black">
+                {listing.energieausweisArt === 'bedarfsausweis' ? t('demandCertificate') : t('consumptionCertificate')}
+              </span>
+            </div>
+            <div className="flex justify-between py-3 border-b border-neutral-light/30">
+              <span className="text-neutral-dark">
+                {listing.energieausweisArt === 'bedarfsausweis' ? t('energyDemand') : t('energyConsumption')}
+              </span>
+              <span className="font-medium text-page-black">{listing.endenergie} kWh/m&sup2;a</span>
+            </div>
+            <div className="flex justify-between py-3 border-b border-neutral-light/30">
+              <span className="text-neutral-dark">{t('energySource')}</span>
+              <span className="font-medium text-page-black">{listing.energietraeger}</span>
+            </div>
+            <div className="flex justify-between py-3 border-b border-neutral-light/30">
+              <span className="text-neutral-dark">{t('buildingYear')}</span>
+              <span className="font-medium text-page-black">{listing.baujahr}</span>
+            </div>
+            {listing.effizienzklasse && (
+              <div className="flex justify-between py-3 border-b border-neutral-light/30">
+                <span className="text-neutral-dark">{t('efficiencyClass')}</span>
+                <span className="font-medium text-page-black">{listing.effizienzklasse}</span>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Features */}

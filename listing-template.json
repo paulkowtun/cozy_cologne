@@ -12,11 +12,24 @@
   "typ": "wohnung",
   "zimmer": 0,
   "quadratmeter": 0,
+  "gemeinschaftsflaeche": 0,
   "etage": 0,
   "ausstattung": {
     "terrasse": false,
+    "balkon": false,
     "aufzug": false,
-    "parkplatz": false
+    "parkplatz": false,
+    "keller": false,
+    "waschmaschine": false,
+    "trockner": false
+  },
+  "energieausweis": {
+    "art": "bedarfsausweis ODER verbrauchsausweis ODER denkmal",
+    "endenergie": 0,
+    "energietraeger": "z.B. Gas, Öl, Fernwärme, Strom",
+    "energietraegerEN": "e.g. Gas, Oil, District Heating, Electricity",
+    "baujahr": 0,
+    "effizienzklasse": "A+ bis H"
   },
   "miete": {
     "warmmiete": 0,
@@ -27,6 +40,9 @@
   "verfuegbarAb": "YYYY-MM-DD",
   "mindestmietdauer": "",
   "mindestmietdauerEN": "",
+  "moebliert": true,
+  "renoviert": true,
   "highlights": [],
-  "highlightsEN": []
+  "highlightsEN": [],
+  "bilder": "bilder/"
 }

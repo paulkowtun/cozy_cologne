@@ -3,6 +3,9 @@
 import { useState, useCallback } from 'react';
 import Image from 'next/image';
 
+const BLUR_PLACEHOLDER =
+  'data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAMABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AKoAk//Z';
+
 interface ListingGalleryProps {
   images: string[];
   name: string;
@@ -45,6 +48,8 @@ export default function ListingGallery({ images, name }: ListingGalleryProps) {
           sizes="(max-width: 1024px) 100vw, 66vw"
           className="object-cover"
           priority
+          placeholder="blur"
+          blurDataURL={BLUR_PLACEHOLDER}
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
           <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 rounded-full p-3">
@@ -78,6 +83,8 @@ export default function ListingGallery({ images, name }: ListingGalleryProps) {
                 fill
                 sizes="80px"
                 className="object-cover"
+                placeholder="blur"
+                blurDataURL={BLUR_PLACEHOLDER}
               />
             </button>
           ))}
@@ -128,6 +135,8 @@ export default function ListingGallery({ images, name }: ListingGalleryProps) {
               fill
               sizes="100vw"
               className="object-contain"
+              placeholder="blur"
+              blurDataURL={BLUR_PLACEHOLDER}
             />
           </div>
 

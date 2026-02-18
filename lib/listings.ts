@@ -51,12 +51,12 @@ export function getListingBySlug(slug: string): Listing | null {
   const featureLabelsDe: Record<string, string> = {
     aufzug: 'Aufzug',
     parkplatz: 'Parkplatz',
-    keller: 'Keller',
+    keller: 'Fahrradstellplatz',
   };
   const featureLabelsEn: Record<string, string> = {
     aufzug: 'Elevator',
     parkplatz: 'Parking',
-    keller: 'Basement',
+    keller: 'Bicycle Parking',
   };
 
   const hasTerrasse = raw.ausstattung.terrasse === true;
@@ -76,8 +76,24 @@ export function getListingBySlug(slug: string): Listing | null {
     ausstattungEn.push('Balcony');
   }
 
+  const hasWaschmaschine = raw.ausstattung.waschmaschine === true;
+  const hasTrockner = raw.ausstattung.trockner === true;
+
+  if (hasWaschmaschine && hasTrockner) {
+    ausstattungDe.push('Waschmaschine & Trockner');
+    ausstattungEn.push('Washing Machine & Dryer');
+  } else if (hasWaschmaschine) {
+    ausstattungDe.push('Waschmaschine');
+    ausstattungEn.push('Washing Machine');
+  } else if (hasTrockner) {
+    ausstattungDe.push('Trockner');
+    ausstattungEn.push('Dryer');
+  }
+
+  const pairedKeys = ['terrasse', 'balkon', 'waschmaschine', 'trockner'];
+
   for (const [key, val] of Object.entries(raw.ausstattung)) {
-    if (val !== true || key === 'terrasse' || key === 'balkon') continue;
+    if (val !== true || pairedKeys.includes(key)) continue;
     ausstattungDe.push(featureLabelsDe[key] ?? key);
     ausstattungEn.push(featureLabelsEn[key] ?? key);
   }
@@ -91,6 +107,7 @@ export function getListingBySlug(slug: string): Listing | null {
     typ: raw.typ,
     zimmer: raw.zimmer,
     quadratmeter: raw.quadratmeter,
+    gemeinschaftsflaeche: raw.gemeinschaftsflaeche ?? 0,
     etage: raw.etage,
     warmmiete: raw.miete.warmmiete,
     kaltmiete: raw.miete.kaltmiete,
@@ -103,6 +120,12 @@ export function getListingBySlug(slug: string): Listing | null {
     parkplatz: raw.ausstattung.parkplatz ?? false,
     ausstattung: ausstattungDe,
     ausstattungEN: ausstattungEn,
+    energieausweisArt: raw.energieausweis.art,
+    endenergie: raw.energieausweis.endenergie,
+    energietraeger: raw.energieausweis.energietraeger,
+    energietraegerEN: raw.energieausweis.energietraegerEN,
+    baujahr: raw.energieausweis.baujahr,
+    effizienzklasse: raw.energieausweis.effizienzklasse,
     highlights: raw.highlights,
     highlightsEN: raw.highlightsEN,
     beschreibung: raw.beschreibung,
@@ -125,6 +148,7 @@ export function getLocalizedListing(
     typ: listing.typ,
     zimmer: listing.zimmer,
     quadratmeter: listing.quadratmeter,
+    gemeinschaftsflaeche: listing.gemeinschaftsflaeche,
     etage: listing.etage,
     warmmiete: listing.warmmiete,
     kaltmiete: listing.kaltmiete,
@@ -136,6 +160,11 @@ export function getLocalizedListing(
     terrasse: listing.terrasse,
     aufzug: listing.aufzug,
     parkplatz: listing.parkplatz,
+    energieausweisArt: listing.energieausweisArt,
+    endenergie: listing.endenergie,
+    energietraeger: isEN ? listing.energietraegerEN : listing.energietraeger,
+    baujahr: listing.baujahr,
+    effizienzklasse: listing.effizienzklasse,
     ausstattung: isEN ? listing.ausstattungEN : listing.ausstattung,
     highlights: isEN ? listing.highlightsEN : listing.highlights,
     beschreibung: isEN ? listing.beschreibungEN : listing.beschreibung,
