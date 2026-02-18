@@ -13,10 +13,11 @@ export async function POST(request: Request) {
     );
   }
 
+  const port = Number(process.env.SMTP_PORT) || 465;
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT) || 465,
-    secure: Number(process.env.SMTP_PORT) === 465,
+    port,
+    secure: port === 465,
     auth: {
       user: 'p.kowtun@pk-immobilien.de',
       pass: process.env.SMTP_PASSWORD,
@@ -42,9 +43,11 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json({ success: true });
-  } catch {
+  } catch (err) {
+    console.error('SMTP error:', err);
+    const message = err instanceof Error ? err.message : 'Unknown error';
     return NextResponse.json(
-      { error: 'Failed to send email' },
+      { error: 'Failed to send email', detail: message },
       { status: 500 }
     );
   }
