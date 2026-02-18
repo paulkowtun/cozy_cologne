@@ -14,14 +14,17 @@ export async function POST(request: Request) {
   }
 
   const port = Number(process.env.SMTP_PORT) || 465;
+  console.log('SMTP config:', { host: process.env.SMTP_HOST, port, passLength: process.env.SMTP_PASSWORD?.length });
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port,
     secure: port === 465,
     auth: {
+      type: 'LOGIN',
       user: 'p.kowtun@immobilien-pk.de',
       pass: process.env.SMTP_PASSWORD,
     },
+    tls: { rejectUnauthorized: false },
   });
 
   const subject = listing
