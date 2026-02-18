@@ -65,9 +65,15 @@ export function getListingBySlug(slug: string): Listing | null {
   const ausstattungDe: string[] = [];
   const ausstattungEn: string[] = [];
 
-  if (hasTerrasse || hasBalkon) {
-    ausstattungDe.push('Terrasse / Balkon');
-    ausstattungEn.push('Terrace / Balcony');
+  if (hasTerrasse && hasBalkon) {
+    ausstattungDe.push('Terrasse & Balkon');
+    ausstattungEn.push('Terrace & Balcony');
+  } else if (hasTerrasse) {
+    ausstattungDe.push('Terrasse');
+    ausstattungEn.push('Terrace');
+  } else if (hasBalkon) {
+    ausstattungDe.push('Balkon');
+    ausstattungEn.push('Balcony');
   }
 
   for (const [key, val] of Object.entries(raw.ausstattung)) {
