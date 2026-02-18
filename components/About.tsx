@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 const icons = [
   // Sofa icon for fully furnished
@@ -37,11 +38,11 @@ export default function About() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {points.map((point, i) => (
-                <div key={i} className="flex items-start gap-4">
+                <div key={i} className="flex items-center gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-brand bg-brand-warm-light flex items-center justify-center text-brand-warm-dark">
                     {point.icon}
                   </div>
-                  <p className="font-heading font-medium text-page-black pt-2">
+                  <p className="font-heading font-medium text-page-black">
                     {point.text}
                   </p>
                 </div>
@@ -49,18 +50,16 @@ export default function About() {
             </div>
           </div>
 
-          {/* Decorative visual */}
+          {/* Image */}
           <div className="fade-in relative">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-brand-warm-dark to-brand-warm-light flex items-center justify-center">
-              <div className="text-center text-white p-8">
-                <span className="font-heading text-5xl sm:text-6xl font-bold block mb-2">
-                  <span className="relative inline-block">
-                    cozy!
-                    <span className="absolute bottom-0 left-0 w-full h-[3px] bg-white rounded-full" />
-                  </span>
-                </span>
-                <span className="font-heading text-3xl sm:text-4xl font-light block">cologne</span>
-              </div>
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src="/frontimg.webp"
+                alt="cozy! cologne"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
             {/* Decorative accent */}
             <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-brand bg-brand-warm-light -z-10" />

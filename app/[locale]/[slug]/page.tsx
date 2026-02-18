@@ -111,9 +111,17 @@ export default async function ListingPage({
           </Link>
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-            {/* Gallery */}
+            {/* Gallery + Description */}
             <div className="lg:col-span-3">
               <ListingGallery images={localized.images} name={localized.name} />
+
+              {/* Description */}
+              <div className="mt-8">
+                <h2 className="font-heading font-bold text-lg text-page-black mb-4">{t('description')}</h2>
+                <p className="text-neutral-dark leading-relaxed whitespace-pre-line">
+                  {localized.beschreibung}
+                </p>
+              </div>
             </div>
 
             {/* Details */}

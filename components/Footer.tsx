@@ -21,18 +21,24 @@ export default function Footer() {
               <span className="text-brand-warm-dark">cologne</span>
             </span>
             <p className="mt-4 text-sm">{t('footer.madeWith')}</p>
+            <p className="mt-1 text-sm">
+              {t('footer.builtBy')}{' '}
+              <a href="https://zentrasoftware.com" target="_blank" rel="noopener noreferrer" className="text-brand-warm-dark hover:text-white transition-colors">
+                Zentrasoftware
+              </a>
+            </p>
           </div>
 
           {/* Quick links */}
           <div>
             <h3 className="font-heading font-semibold text-white mb-4">Links</h3>
             <nav className="flex flex-col gap-3" aria-label="Footer navigation">
-              <a href="#apartments" className="text-sm hover:text-white transition-colors">
+              <Link href="/#apartments" className="text-sm hover:text-white transition-colors">
                 {t('nav.apartments')}
-              </a>
-              <a href="#about" className="text-sm hover:text-white transition-colors">
+              </Link>
+              <Link href="/#about" className="text-sm hover:text-white transition-colors">
                 {t('nav.about')}
-              </a>
+              </Link>
               <a href="#contact" className="text-sm hover:text-white transition-colors">
                 {t('nav.contact')}
               </a>

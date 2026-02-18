@@ -7,13 +7,13 @@
     "datenschutz": "Privacy Policy"
   },
   "hero": {
-    "headline": "Fully furnished. Fully renovated. Fully Cologne.",
-    "subheadline": "Premium furnished apartments and flat-share concepts in Cologne's best neighborhoods — move-in ready and designed with love.",
+    "headline": "Fully renovated. Fully furnished. Fully Cologne.",
+    "subheadline": "Premium furnished apartments and flat-share concepts in Cologne's best neighborhoods — move-in ready and finished to the highest standards.",
     "cta": "Explore Apartments"
   },
   "about": {
     "title": "About Us",
-    "text": "At cozy! cologne, we rent out fully furnished, completely renovated apartments and flat-share concepts in Cologne's most popular neighborhoods. Every apartment is furnished with the highest quality and attention to detail — so you feel at home from day one.",
+    "text": "At cozy! cologne, we rent out fully furnished, completely renovated apartments and flat-share concepts in Cologne's most popular neighborhoods. Every apartment is furnished with the highest quality and attention to detail, including a fully equipped kitchen with all essential appliances — so you feel at home from day one and don't have to worry about a thing.",
     "point1": "Fully furnished & move-in ready",
     "point2": "Superior quality",
     "point3": "Completely renovated",
@@ -66,6 +66,7 @@
   },
   "footer": {
     "madeWith": "Made with ❤️ in Cologne",
+    "builtBy": "Website built by",
     "copyright": "© 2025 cozy! cologne"
   },
   "listing": {

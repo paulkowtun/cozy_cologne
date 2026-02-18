@@ -107,14 +107,6 @@ export default function ListingDetails({ listing }: ListingDetailsProps) {
         </ul>
       </div>
 
-      {/* Description */}
-      <div className="mb-8">
-        <h2 className="font-heading font-bold text-lg text-page-black mb-4">{t('description')}</h2>
-        <p className="text-neutral-dark leading-relaxed whitespace-pre-line">
-          {listing.beschreibung}
-        </p>
-      </div>
-
       {/* Contact CTA */}
       <a
         href="#contact"

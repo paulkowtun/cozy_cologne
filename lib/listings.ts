@@ -48,9 +48,33 @@ export function getListingBySlug(slug: string): Listing | null {
   }
 
   // Flatten nested JSON into flat Listing
-  const ausstattungKeys = Object.entries(raw.ausstattung)
-    .filter(([, v]) => v === true)
-    .map(([k]) => k);
+  const featureLabelsDe: Record<string, string> = {
+    aufzug: 'Aufzug',
+    parkplatz: 'Parkplatz',
+    keller: 'Keller',
+  };
+  const featureLabelsEn: Record<string, string> = {
+    aufzug: 'Elevator',
+    parkplatz: 'Parking',
+    keller: 'Basement',
+  };
+
+  const hasTerrasse = raw.ausstattung.terrasse === true;
+  const hasBalkon = raw.ausstattung.balkon === true;
+
+  const ausstattungDe: string[] = [];
+  const ausstattungEn: string[] = [];
+
+  if (hasTerrasse || hasBalkon) {
+    ausstattungDe.push('Terrasse / Balkon');
+    ausstattungEn.push('Terrace / Balcony');
+  }
+
+  for (const [key, val] of Object.entries(raw.ausstattung)) {
+    if (val !== true || key === 'terrasse' || key === 'balkon') continue;
+    ausstattungDe.push(featureLabelsDe[key] ?? key);
+    ausstattungEn.push(featureLabelsEn[key] ?? key);
+  }
 
   return {
     slug,
@@ -71,8 +95,8 @@ export function getListingBySlug(slug: string): Listing | null {
     terrasse: raw.ausstattung.terrasse ?? false,
     aufzug: raw.ausstattung.aufzug ?? false,
     parkplatz: raw.ausstattung.parkplatz ?? false,
-    ausstattung: ausstattungKeys,
-    ausstattungEN: ausstattungKeys,
+    ausstattung: ausstattungDe,
+    ausstattungEN: ausstattungEn,
     highlights: raw.highlights,
     highlightsEN: raw.highlightsEN,
     beschreibung: raw.beschreibung,
