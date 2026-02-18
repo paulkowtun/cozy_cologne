@@ -8,16 +8,16 @@
   },
   "hero": {
     "headline": "Voll renoviert. Voll möbliert. Voll Köln.",
-    "subheadline": "Hochwertig möblierte Apartments und WG-Konzepte in den besten Vierteln Kölns — bezugsfertig und mit höchsten Standards eingerichtet.",
+    "subheadline": "Hochwertig möblierte Apartments und WGs in den besten Vierteln Kölns — bezugsfertig und mit höchsten Standards eingerichtet.",
     "cta": "Wohnungen entdecken"
   },
   "about": {
     "title": "Über uns",
-    "text": "Bei cozy! cologne vermieten wir voll möblierte, komplett renovierte Apartments und WG-Konzepte in den beliebtesten Vierteln Kölns. Jede Wohnung wird mit höchster Qualität und Liebe zum Detail eingerichtet, sowie einer voll ausgestatteten Küche mit allen notwendigen Elektrogeräten — damit Sie sich vom ersten Tag an zuhause fühlen und sich um gar nichts kümmern müssen.",
+    "text": "Bei cozy! cologne vermieten wir voll möblierte, komplett renovierte Apartments und WGs in den beliebtesten Vierteln Kölns. Jede Wohnung wird mit höchster Qualität und Liebe zum Detail eingerichtet, sowie einer voll ausgestatteten Küche mit allen notwendigen Elektrogeräten — damit Sie sich vom ersten Tag an zuhause fühlen und sich um gar nichts kümmern müssen.",
     "point1": "Voll möbliert & bezugsfertig",
     "point2": "Hochwertige Ausstattung",
     "point3": "Komplett renoviert",
-    "point4": "Apartments & WG-Konzepte"
+    "point4": "Apartments & WGs"
   },
   "apartments": {
     "title": "Unsere Wohnungen",
@@ -98,6 +98,6 @@
   },
   "metadata": {
     "title": "cozy! cologne — Möblierte Apartments in Köln",
-    "description": "Hochwertig möblierte Apartments und WG-Konzepte in Köln. Voll renoviert, voll möbliert, sofort bezugsfertig."
+    "description": "Hochwertig möblierte Apartments und WGs in Köln. Voll renoviert, voll möbliert, sofort bezugsfertig."
   }
 }
