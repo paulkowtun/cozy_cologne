@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import type SMTPTransport from 'nodemailer/lib/smtp-transport';
 
 export const runtime = 'nodejs';
 
@@ -25,7 +26,7 @@ export async function POST(request: Request) {
       pass: process.env.SMTP_PASSWORD,
     },
     tls: { rejectUnauthorized: false },
-  });
+  } as SMTPTransport.Options);
 
   const subject = listing
     ? `Neue Anfrage: ${listing}`
