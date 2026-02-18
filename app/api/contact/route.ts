@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     port,
     secure: port === 465,
     auth: {
-      user: 'p.kowtun@pk-immobilien.de',
+      user: 'p.kowtun@immobilien-pk.de',
       pass: process.env.SMTP_PASSWORD,
     },
   });
@@ -35,7 +35,7 @@ export async function POST(request: Request) {
 
   try {
     await transporter.sendMail({
-      from: 'p.kowtun@pk-immobilien.de',
+      from: 'p.kowtun@immobilien-pk.de',
       to: 'paul.kowtun@gmail.com',
       replyTo: `${name} <${email}>`,
       subject,
