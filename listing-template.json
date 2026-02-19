@@ -7,7 +7,8 @@
     "strasse": "",
     "plz": "",
     "stadt": "Köln",
-    "stadtteil": ""
+    "stadtteil": "",
+    "stadtteilEN": ""
   },
   "typ": "wohnung",
   "zimmer": 0,

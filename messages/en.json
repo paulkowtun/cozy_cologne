@@ -67,7 +67,7 @@
   "footer": {
     "madeWith": "Made with ❤️ in Cologne",
     "builtBy": "Website built by",
-    "copyright": "© 2025 cozy! cologne"
+    "copyright": "© 2026 cozy! cologne"
   },
   "listing": {
     "backToOverview": "Back to Overview",
@@ -102,7 +102,8 @@
     "energySource": "Primary Energy Source",
     "buildingYear": "Year of Construction",
     "efficiencyClass": "Energy Efficiency Class",
-    "monumentProtection": "No energy certificate required due to monument protection pursuant to § 79 (4) GEG"
+    "monumentProtection": "No energy certificate required due to monument protection pursuant to § 79 (4) GEG",
+    "imageDisclaimer": "* Images may be examples from other apartments of ours, as we also offer apartments that are currently still being renovated."
   },
   "impressum": {
     "title": "Legal Notice",

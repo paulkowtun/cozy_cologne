@@ -1,38 +1,41 @@
 {
-  "name": "Helle 3-Zimmer-WG in Köln-Mülheim",
-  "nameEN": "Bright 3-Room Flat Share in Cologne-Mühlheim",
-  "beschreibung": "Eine wunderschön renovierte 3-Zimmer-Wohnung mit modernem Mobiliar und einem sonnigen Balkon. Perfekt für Berufstätige oder Paare, die ein gemütliches Zuhause in einem der lebendigsten Viertel Kölns suchen.",
-  "beschreibungEN": "A beautifully renovated 3-room Flat Share with modern furnishings and a sunny terrace. Perfect for professionals or couples looking for a cozy home in one of Cologne's most vibrant neighborhoods.",
+  "name": "Frisch sanierte und gehoben möblierte 2-Zimmer WG im Zentrum von Köln Mülheim",
+  "nameEN": "Freshly renovated and high-end furnished 2-room shared apartment in the center of Cologne-Mülheim",
+  "beschreibung": "In der Berliner Straße 70 in 51063 Köln-Mülheim erwartet Sie eine frisch renovierte und hochwertig möblierte 2-Zimmer-WG, die modernen Wohnkomfort mit einer hervorragenden Lage verbindet. Die Wohnung wurde kürzlich umfassend saniert und überzeugt durch helle, freundliche Räume sowie eine stilvolle, zeitgemäße Einrichtung – hier können Sie direkt einziehen und sich wohlfühlen. Beide Zimmer sind vollständig möbliert und bieten eine angenehme Wohnatmosphäre mit durchdachtem Raumkonzept. Die moderne Einbauküche ist mit allen wichtigen Küchengeräten ausgestattet und lädt zum gemeinsamen Kochen ein. Besonders praktisch: Eine Waschmaschine und ein Trockner befinden sich direkt in der Wohnung und stehen Ihnen exklusiv zur Verfügung.\nDie Lage im Herzen von Köln-Mülheim bietet eine ausgezeichnete Infrastruktur mit zahlreichen Einkaufsmöglichkeiten, Cafés und Restaurants in unmittelbarer Nähe. Direkt vor der Tür befindet sich die Bushaltestelle „Köln Mülheim Berliner Straße“ mit den Linien 104, 151, 152, 155, 156, 260 und 434. Zudem ist die Stadtbahnlinie 4 (Haltestelle Von-Sparr-Straße) fußläufig erreichbar. Am nahegelegenen Wiener Platz (ca. 10–15 Minuten zu Fuß) verkehren zusätzlich die Stadtbahnlinien 13 und 18. Der Bahnhof Köln-Mülheim mit den S-Bahn-Linien S6 und S11 sowie Regionalbahnen ist ebenfalls gut erreichbar. Dadurch gelangen Sie schnell und unkompliziert in die Kölner Innenstadt, zur Messe oder in andere Stadtteile.\nDie Wohnung eignet sich ideal für Berufstätige, Studierende, Pendler oder Projektmitarbeiter, die komfortables Wohnen in zentraler Lage schätzen.",
+  "beschreibungEN": "At Berliner Straße 70 in 51063 Cologne-Mülheim, you will find a freshly renovated and high-quality furnished 2-room shared apartment that combines modern living comfort with an excellent location. The apartment has recently been extensively refurbished and impresses with bright, welcoming rooms and a stylish, contemporary interior – allowing you to move in and feel at home immediately. Both rooms are fully furnished and offer a pleasant living atmosphere with a well-thought-out layout. The modern fitted kitchen is equipped with all essential appliances and invites you to cook together. Particularly convenient: a washing machine and dryer are located directly in the apartment and are available exclusively for your use.\nThe location in the heart of Cologne-Mülheim offers excellent infrastructure with numerous shops, cafés, and restaurants within walking distance. Right outside the building, you will find the bus stop \"Köln Mülheim Berliner Straße\" served by lines 104, 151, 152, 155, 156, 260, and 434. The light rail line 4 (Von-Sparr-Straße stop) is also within walking distance. At nearby Wiener Platz (approximately 10–15 minutes on foot), additional light rail lines 13 and 18 are available. Cologne-Mülheim station, with S-Bahn lines S6 and S11 as well as regional train connections, is also easily accessible. This allows you to reach Cologne city center, the trade fair grounds, or other districts quickly and conveniently.\nThe apartment is ideal for professionals, students, commuters, or project-based employees who appreciate comfortable living in a central location.",
   "adresse": {
     "strasse": "Berliner Straße 70",
     "plz": "51063",
     "stadt": "Köln",
-    "stadtteil": "Köln-Mühlheim"
+    "stadtteil": "Köln-Mühlheim",
+    "stadtteilEN": "Cologne-Mülheim"
   },
-  "typ": "wohnung",
-  "zimmer": 3,
+  "typ": "wg",
+  "zimmer": 2,
   "quadratmeter": 10,
   "gemeinschaftsflaeche": 15,
-  "etage": 2,
+  "etage": 3,
   "ausstattung": {
     "terrasse": true,
+    "balkon": false,
     "aufzug": false,
     "parkplatz": false,
-    "balkon": false,
-    "keller": true
+    "keller": true,
+    "waschmaschine": true,
+    "trockner": true
   },
   "energieausweis": {
-    "art": "bedarfsausweis",
-    "endenergie": 120,
-    "energietraeger": "Gas",
-    "energietraegerEN": "Gas",
-    "baujahr": 1965,
-    "effizienzklasse": "D"
+    "art": "denkmal",
+    "endenergie": 0,
+    "energietraeger": "z.B. Gas, Öl, Fernwärme, Strom",
+    "energietraegerEN": "e.g. Gas, Oil, District Heating, Electricity",
+    "baujahr": 0,
+    "effizienzklasse": "A+ bis H"
   },
   "miete": {
-    "warmmiete": 1450,
-    "kaltmiete": 1235,
-    "nebenkosten": 215,
+    "warmmiete": 600,
+    "kaltmiete": 550,
+    "nebenkosten": 50,
     "waehrung": "EUR"
   },
   "verfuegbarAb": "2026-03-01",
@@ -41,16 +44,17 @@
   "moebliert": true,
   "renoviert": true,
   "highlights": [
-    "Fußbodenheizung",
-    "Designer- Einbauküche",
-    "Waschmaschine/Trockner in der Wohnung",
-    "High-Speed-Internet inklusive"
-  ],
+  	"Einbauküche mit Küchengeräten",
+  	"Im Sommer nutzbare Terasse",
+  	"Waschmaschine und Trockner",
+  	"Zentrale Lage in Köln mit guter Anbindung an öffentliche Verkehrsmittel"
+  	],
   "highlightsEN": [
-    "Floor heating",
-    "Designer kitchen",
-    "Washer/dryer in unit",
-    "High-speed internet included"
-  ],
+    "Fitted kitchen with appliances",
+  	"Terrace usable in summer",
+  	"Washing machine and dryer",
+  	"Central location in Cologne with great access to public transportation"
+	],
   "bilder": "bilder/"
 }
+

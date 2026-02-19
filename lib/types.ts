@@ -3,6 +3,7 @@ export interface ListingJsonAdresse {
   plz: string;
   stadt: string;
   stadtteil: string;
+  stadtteilEN: string;
 }
 
 export interface ListingJsonAusstattung {
@@ -55,6 +56,7 @@ export interface Listing {
   nameEN: string;
   adresse: string;
   stadtteil: string;
+  stadtteilEN: string;
   typ: 'wohnung' | 'wg';
   zimmer: number;
   quadratmeter: number;

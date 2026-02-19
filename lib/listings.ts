@@ -31,7 +31,8 @@ export function getListings(): Listing[] {
 }
 
 export function getListingBySlug(slug: string): Listing | null {
-  const listingDir = path.join(LISTINGS_DIR, slug);
+  const decoded = decodeURIComponent(slug);
+  const listingDir = path.join(LISTINGS_DIR, decoded);
   const jsonPath = path.join(listingDir, 'listing.json');
 
   if (!fs.existsSync(jsonPath)) return null;
@@ -104,6 +105,7 @@ export function getListingBySlug(slug: string): Listing | null {
     nameEN: raw.nameEN,
     adresse: `${raw.adresse.strasse}, ${raw.adresse.plz} ${raw.adresse.stadt}`,
     stadtteil: raw.adresse.stadtteil,
+    stadtteilEN: raw.adresse.stadtteilEN,
     typ: raw.typ,
     zimmer: raw.zimmer,
     quadratmeter: raw.quadratmeter,
@@ -144,7 +146,7 @@ export function getLocalizedListing(
     slug: listing.slug,
     name: isEN ? listing.nameEN : listing.name,
     adresse: listing.adresse,
-    stadtteil: listing.stadtteil,
+    stadtteil: isEN ? listing.stadtteilEN : listing.stadtteil,
     typ: listing.typ,
     zimmer: listing.zimmer,
     quadratmeter: listing.quadratmeter,

@@ -15,7 +15,6 @@ export async function POST(request: Request) {
   }
 
   const port = Number(process.env.SMTP_PORT) || 465;
-  console.log('SMTP config:', { host: process.env.SMTP_HOST, port, passLength: process.env.SMTP_PASSWORD?.length });
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port,
@@ -38,13 +37,14 @@ export async function POST(request: Request) {
   text += `\nNachricht:\n${message}`;
 
   try {
-    await transporter.sendMail({
+    const info = await transporter.sendMail({
       from: 'p.kowtun@immobilien-pk.de',
       to: 'j.siegmann@immobilien-pk.de',
       replyTo: `${name} <${email}>`,
       subject,
       text,
     });
+    console.log('Mail sent:', { messageId: info.messageId, response: info.response });
 
     return NextResponse.json({ success: true });
   } catch (err) {

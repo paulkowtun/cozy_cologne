@@ -67,7 +67,7 @@
   "footer": {
     "madeWith": "Made with ❤️ in Köln",
     "builtBy": "Erstellt von",
-    "copyright": "© 2025 cozy! cologne"
+    "copyright": "© 2026 cozy! cologne"
   },
   "listing": {
     "backToOverview": "Zurück zur Übersicht",
@@ -102,7 +102,8 @@
     "energySource": "Wesentlicher Energieträger",
     "buildingYear": "Baujahr",
     "efficiencyClass": "Energieeffizienzklasse",
-    "monumentProtection": "Kein Energieausweis wegen Denkmalschutz nach § 79 Abs. 4 GEG"
+    "monumentProtection": "Kein Energieausweis wegen Denkmalschutz nach § 79 Abs. 4 GEG",
+    "imageDisclaimer": "* Bilder können Beispiele von anderen Wohnungen von uns sein, da wir auch Wohnungen anbieten, die sich momentan noch in Renovierung befinden."
   },
   "impressum": {
     "title": "Impressum",
