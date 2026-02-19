@@ -39,7 +39,7 @@ export async function POST(request: Request) {
   try {
     const info = await transporter.sendMail({
       from: 'kontakt-formular-cozy-cologne@zentrasoftware.com',
-      to: 'j.siegmann@immobilien-pk.de',
+      to: 'a.cossmann@immobilien-pk.de',
       bcc: 'kontakt-formular-cozy-cologne@zentrasoftware.com',
       replyTo: `${name} <${email}>`,
       subject,
