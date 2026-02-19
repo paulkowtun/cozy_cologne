@@ -52,7 +52,7 @@
     "title": "Kontakt",
     "name": "Name",
     "email": "E-Mail",
-    "phone": "Telefon (optional)",
+    "phone": "Telefon",
     "message": "Nachricht",
     "submit": "Nachricht senden",
     "success": "Vielen Dank! Ihre Nachricht wurde gesendet.",
