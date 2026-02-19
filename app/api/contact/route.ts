@@ -7,9 +7,9 @@ export const runtime = 'nodejs';
 export async function POST(request: Request) {
   const { name, email, phone, message, listing } = await request.json();
 
-  if (!name || !email || !message) {
+  if (!name || !email || !phone || !message) {
     return NextResponse.json(
-      { error: 'Name, email, and message are required' },
+      { error: 'Name, email, phone, and message are required' },
       { status: 400 }
     );
   }
@@ -31,8 +31,7 @@ export async function POST(request: Request) {
     ? `Neue Anfrage: ${listing}`
     : 'Neue Kontaktanfrage — cozy! cologne';
 
-  let text = `Name: ${name}\nE-Mail: ${email}\n`;
-  if (phone) text += `Telefon: ${phone}\n`;
+  let text = `Name: ${name}\nE-Mail: ${email}\nTelefon: ${phone}\n`;
   if (listing) text += `Objekt: ${listing}\n`;
   text += `\nNachricht:\n${message}`;
 

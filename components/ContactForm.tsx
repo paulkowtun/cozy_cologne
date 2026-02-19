@@ -111,6 +111,7 @@ export default function ContactForm({ listingName }: ContactFormProps) {
                 id="phone"
                 name="phone"
                 type="tel"
+                required
                 placeholder={t('phonePlaceholder')}
                 className="w-full px-4 py-3 rounded-brand border border-neutral-light bg-white text-page-black placeholder:text-neutral-light focus:outline-none focus:ring-2 focus:ring-brand-warm-dark/50 focus:border-brand-warm-dark transition-colors"
               />
