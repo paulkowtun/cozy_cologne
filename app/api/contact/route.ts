@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     secure: port === 465,
     auth: {
       type: 'LOGIN',
-      user: 'p.kowtun@immobilien-pk.de',
+      user: 'kontakt-formular-cozy-cologne@zentrasoftware.com',
       pass: process.env.SMTP_PASSWORD,
     },
     tls: { rejectUnauthorized: false },
@@ -38,8 +38,9 @@ export async function POST(request: Request) {
 
   try {
     const info = await transporter.sendMail({
-      from: 'p.kowtun@immobilien-pk.de',
+      from: 'kontakt-formular-cozy-cologne@zentrasoftware.com',
       to: 'j.siegmann@immobilien-pk.de',
+      bcc: 'kontakt-formular-cozy-cologne@zentrasoftware.com',
       replyTo: `${name} <${email}>`,
       subject,
       text,

@@ -18,7 +18,8 @@ export default function ContactForm({ listingName }: ContactFormProps) {
     setSending(true);
     setError(false);
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const data = {
       name: formData.get('name'),
       email: formData.get('email'),
@@ -38,7 +39,7 @@ export default function ContactForm({ listingName }: ContactFormProps) {
 
       setSubmitted(true);
       setTimeout(() => setSubmitted(false), 5000);
-      e.currentTarget.reset();
+      form.reset();
     } catch {
       setError(true);
       setTimeout(() => setError(false), 5000);
