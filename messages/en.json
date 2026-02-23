@@ -4,7 +4,8 @@
     "about": "About",
     "contact": "Contact",
     "impressum": "Legal Notice",
-    "datenschutz": "Privacy Policy"
+    "datenschutz": "Privacy Policy",
+    "b2b": "Business Clients"
   },
   "hero": {
     "headline": "Fully renovated. Fully furnished. Fully Cologne.",
@@ -112,6 +113,33 @@
   "datenschutz": {
     "title": "Privacy Policy",
     "content": "1. Data Controller\n\nThe data controller within the meaning of the General Data Protection Regulation (GDPR) is:\n\nPK HOLDING INVEST GmbH\nRolshover Str. 48\n51105 Cologne\nGermany\nEmail: info@pk-immobilien.de\n\nWe have not appointed a data protection officer as we are not legally required to do so. For any data protection inquiries, please contact us at the address above.\n\n2. General Information on Data Processing\n\nWe only process personal data of our users insofar as this is necessary to provide a functional website and our content and services. The processing of personal data generally only takes place with the user's consent. An exception applies in cases where prior consent cannot be obtained for practical reasons and the processing of data is permitted by law.\n\nLegal Basis:\nWhere we obtain consent for processing operations of personal data, Art. 6(1)(a) GDPR serves as the legal basis. For processing necessary for the performance of a contract, Art. 6(1)(b) GDPR serves as the legal basis. This also applies to processing operations necessary for pre-contractual measures. Where processing is necessary to protect our legitimate interests, Art. 6(1)(f) GDPR serves as the legal basis.\n\n3. Your Rights as a Data Subject\n\nYou have the following rights regarding your personal data:\n\n- Right of access (Art. 15 GDPR)\n- Right to rectification (Art. 16 GDPR)\n- Right to erasure (Art. 17 GDPR)\n- Right to restriction of processing (Art. 18 GDPR)\n- Right to data portability (Art. 20 GDPR)\n- Right to object to processing (Art. 21 GDPR)\n- Right to withdraw consent (Art. 7(3) GDPR)\n- Right to lodge a complaint with a supervisory authority (Art. 77 GDPR)\n\nThe competent supervisory authority is:\nLandesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen\nKavalleriestraße 2-4\n40213 Düsseldorf, Germany\n\n4. Data Collection on This Website\n\nServer Log Files:\nThe hosting provider of these pages automatically collects and stores information in server log files, which your browser automatically transmits to us. These are:\n\n- Browser type and version\n- Operating system used\n- Referrer URL\n- Hostname of the accessing computer\n- Time of the server request\n- IP address (anonymized)\n\nThis data is not merged with other data sources. The collection of this data is based on Art. 6(1)(f) GDPR. The website operator has a legitimate interest in the technically error-free presentation and optimization of its website. The server log files are deleted after 7 days at the latest.\n\n5. Contact Form\n\nIf you send us inquiries via the contact form, your details from the form (name, email address, phone number, message) will be stored by us for the purpose of processing the inquiry and in case of follow-up questions. We do not share this data without your consent.\n\nThe processing of this data is based on Art. 6(1)(b) GDPR if your inquiry is related to the performance of a contract or is necessary for pre-contractual measures. In all other cases, the processing is based on our legitimate interest in the effective processing of inquiries addressed to us (Art. 6(1)(f) GDPR).\n\nThe data you enter in the contact form will remain with us until you request deletion, revoke your consent to storage, or the purpose for data storage no longer applies. Mandatory statutory provisions — in particular retention periods — remain unaffected.\n\n6. Cookies\n\nOur website uses cookies. Cookies are small text files that are stored on your device and saved by your browser. Most of the cookies we use are so-called \"session cookies.\" They are automatically deleted after your visit. Other cookies remain stored on your device until you delete them.\n\nTechnically necessary cookies are stored on the basis of Art. 6(1)(f) GDPR. The website operator has a legitimate interest in storing cookies for the technically error-free and optimized provision of its services.\n\nYou can set your browser to inform you about the setting of cookies and only allow cookies on a case-by-case basis, exclude the acceptance of cookies for certain cases or in general, and activate the automatic deletion of cookies when closing the browser.\n\n7. Hosting\n\nThis website is hosted externally. The personal data collected on this website is stored on the servers of the host. This may include IP addresses, contact requests, meta and communication data, contract data, contact details, names, website accesses, and other data generated via a website.\n\nThe use of the host is for the purpose of secure, fast, and efficient provision of our online offering by a professional provider (Art. 6(1)(f) GDPR). If consent has been requested, processing is carried out exclusively on the basis of Art. 6(1)(a) GDPR. Consent can be revoked at any time.\n\n8. SSL/TLS Encryption\n\nThis site uses SSL or TLS encryption for security reasons and to protect the transmission of confidential content, such as inquiries you send to us as the site operator. You can recognize an encrypted connection by the browser address bar changing from \"http://\" to \"https://\" and the lock icon in your browser bar.\n\nWhen SSL or TLS encryption is activated, the data you transmit to us cannot be read by third parties.\n\n9. Changes to This Privacy Policy\n\nThis privacy policy is currently valid as of February 2025. Due to the further development of our website or due to changed legal or regulatory requirements, it may become necessary to amend this privacy policy."
+  },
+  "b2b": {
+    "title": "Business Clients",
+    "heroHeadline": "Effectively support your employees in finding housing",
+    "heroStat": "For 82% of German companies, housing shortage is a key recruiting obstacle",
+    "painTitle": "Never again:",
+    "pain1": "Employees who leave because they can't find suitable housing",
+    "pain2": "Expensive internal HR staff searching for apartments without real expertise",
+    "pain3": "Probation period = No lease — a vicious cycle",
+    "pain4": "No apartment = No visa — a critical issue",
+    "pain5": "Discrimination based on foreign-sounding names",
+    "benefitTitle": "With us:",
+    "benefit1": "Guaranteed and plannable housing stock instead of searching in vain",
+    "benefit2": "Furnished apartments and flat-shares, set up to a consistent premium standard",
+    "benefit3": "Hassle-free accommodation for international professionals — no Schufa required",
+    "benefit4": "Your HR department can focus on its core competencies",
+    "benefit5": "Predictable costs without blowing the budget — also for SMEs",
+    "aboutTitle": "About us:",
+    "about1": "Real estate project developer in Cologne with >10 years of experience",
+    "about2": "Renovation of >50 units per year",
+    "about3": ">200 residential units in permanent portfolio and rental",
+    "about4": "Consistent standard in the renovation and furnishing of every single apartment and flat-share",
+    "ctaTitle": "Interested?",
+    "ctaText": "Download our flyer or contact us directly.",
+    "downloadFlyer": "Download Flyer",
+    "contactPhone": "+49 170 1820801",
+    "contactEmail": "j.siegmann@immobilien-pk.de"
   },
   "metadata": {
     "title": "cozy! cologne — Furnished Apartments in Cologne",

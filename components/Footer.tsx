@@ -42,6 +42,9 @@ export default function Footer() {
               <a href="#contact" className="text-sm hover:text-white transition-colors">
                 {t('nav.contact')}
               </a>
+              <Link href="/geschaeftskunden" className="text-sm hover:text-white transition-colors">
+                {t('nav.b2b')}
+              </Link>
             </nav>
           </div>
 
