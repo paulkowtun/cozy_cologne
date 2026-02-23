@@ -15,6 +15,7 @@ export default async function GeschaeftskundenPage({
   setRequestLocale(locale);
   const t = await getTranslations('b2b');
 
+  const pdfUrl = locale === 'de' ? '/Broschuere_Cozy_Cologne.pdf' : '/Brochure_Cozy_Cologne.pdf';
   const pains = [t('pain1'), t('pain2'), t('pain3'), t('pain4'), t('pain5')];
   const benefits = [t('benefit1'), t('benefit2'), t('benefit3'), t('benefit4'), t('benefit5')];
   const abouts = [t('about1'), t('about2'), t('about3'), t('about4')];
@@ -91,7 +92,7 @@ export default async function GeschaeftskundenPage({
         <p className="text-neutral-dark mb-8">{t('ctaText')}</p>
 
         <a
-          href="/Broschuere-B2B.pdf"
+          href={pdfUrl}
           download
           className="inline-block rounded-brand bg-brand-warm-dark px-10 py-3.5 font-heading font-semibold text-white hover:bg-brand-warm-dark/90 hover:shadow-lg transition-all duration-300 mb-8"
         >
