@@ -91,7 +91,7 @@ export default async function GeschaeftskundenPage({
         <p className="text-neutral-dark mb-8">{t('ctaText')}</p>
 
         <a
-          href="/Flyer-B2B.pdf"
+          href="/Broschuere-B2B.pdf"
           download
           className="inline-block rounded-brand bg-brand-warm-dark px-10 py-3.5 font-heading font-semibold text-white hover:bg-brand-warm-dark/90 hover:shadow-lg transition-all duration-300 mb-8"
         >
