@@ -91,13 +91,22 @@ export default async function GeschaeftskundenPage({
         </h2>
         <p className="text-neutral-dark mb-8">{t('ctaText')}</p>
 
-        <a
-          href={pdfUrl}
-          download
-          className="inline-block rounded-brand bg-brand-warm-dark px-10 py-3.5 font-heading font-semibold text-white hover:bg-brand-warm-dark/90 hover:shadow-lg transition-all duration-300 mb-8"
-        >
-          {t('downloadFlyer')}
-        </a>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <a
+            href="/Broschuere_Cozy_Cologne.pdf"
+            download
+            className="inline-block rounded-brand bg-brand-warm-dark px-10 py-3.5 font-heading font-semibold text-white hover:bg-brand-warm-dark/90 hover:shadow-lg transition-all duration-300"
+          >
+            {t('downloadDE')}
+          </a>
+          <a
+            href="/Brochure_Cozy_Cologne.pdf"
+            download
+            className="inline-block rounded-brand border-2 border-brand-warm-dark px-10 py-3.5 font-heading font-semibold text-brand-warm-dark hover:bg-brand-warm-dark/10 hover:shadow-lg transition-all duration-300"
+          >
+            {t('downloadEN')}
+          </a>
+        </div>
 
         <div className="space-y-2 text-neutral-dark">
           <p>

@@ -137,8 +137,9 @@
     "about4": "Konsistenter Standard in der Sanierung und Einrichtung jeder einzelnen Wohnung und WG",
     "ctaTitle": "Interesse geweckt?",
     "ctaText": "Laden Sie unsere Broschüre herunter oder kontaktieren Sie uns direkt.",
-    "downloadFlyer": "Broschüre herunterladen",
-    "contactPhone": "+49 170 1820801",
+    "downloadDE": "Broschüre (Deutsch)",
+    "downloadEN": "Broschüre (Englisch)",
+    "contactPhone": "+49 171 3875597",
     "contactEmail": "j.siegmann@immobilien-pk.de"
   },
   "metadata": {

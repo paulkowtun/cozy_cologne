@@ -137,8 +137,9 @@
     "about4": "Consistent standard in the renovation and furnishing of every single apartment and flat-share",
     "ctaTitle": "Interested?",
     "ctaText": "Download our brochure or contact us directly.",
-    "downloadFlyer": "Download Brochure",
-    "contactPhone": "+49 170 1820801",
+    "downloadDE": "Brochure (German)",
+    "downloadEN": "Brochure (English)",
+    "contactPhone": "+49 171 3875597",
     "contactEmail": "j.siegmann@immobilien-pk.de"
   },
   "metadata": {
